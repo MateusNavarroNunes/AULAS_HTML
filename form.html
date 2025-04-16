@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulário</title>
+    </head>
+
+    <body>
+        <form method="post" id="formTeste" action="mailto:meuemail@gmail.com"> <!--method: método do formulário. 2 tipos: get e post. Get: menos seguro, aparece direto na URL. Post: mais seguro e mais usado, nao aparece na URL-->
+            <fieldset>
+                <legend>Dados pessoais</legend>:
+                <label for="formNome">Nome:</label> 
+                <input id="formNome" type="text" name="nome" size="50">
+
+
+                <label for="formSigno">Signo:</label>
+                <input id="formSigno" type="text" name="signo" size="50"> <!--text: define uma caixa de TEXTO-->
+            </fieldset>
+
+
+            <br/><br/>
+            
+
+            <fieldset>
+                <legend>Dados geográficos</legend>
+                <p>Selecione a sua região:</p>
+            <input id="formZN" type="radio" name="regiao" value="zn"> <!--radio: define a marcação de uma ÚNICA alternativa-->
+            <label for="formZN">Zona Norte</label>
+            <br/>
+            <input id="formZO" type="radio" name="regiao" value="zo">
+            <label for="formZO">Zona Oeste</label>
+            <br/>
+            <input id="formZS" type="radio" name="regiao" value="zs">
+            <label for="formZS">Zona Sul</label>
+            <br/>
+            <input id="formZL" type="radio" name="regiao" value="zl">
+            <label for="formZL">Zona Leste</label>
+
+
+            <p>Quais são os  meios de transporte que você ultiliza?</p>
+            <input id="formMt" type="checkbox" name="transporte" value="mt"> <!--checkbox: define a marcação de MAIS DE UMA alternativa-->
+            <label for="formMt">Metrô</label>
+            <br/>
+            <input id="formCr" type="checkbox" name="transporte" value="cr">
+            <label for="formCr">Carro</label>
+            <br/>
+            <input id="formBk" type="checkbox" name="transporte" value="bk">
+            <label for="formBk">Bicicleta</label>
+            <br/>
+            <input id="formPe" type="checkbox" name="transporte" value="pe">
+            <label for="formPe">A pé</label>
+            </fieldset>
+            
+
+            <br/><br/>
+
+
+            <fieldset>
+                <legend>Gostos pessoais</legend>
+                <label for="time">Selecione seu time:</label>
+                <select id="time" name="time"> <!--select id: seleção de itens-->
+                <option value="Nenhum">Nenhum</option>
+                <option value="SadaCruzeiro">Sada Cruzeiro</option>
+                <option value="Perugia">Perugia</option>
+                <option value="Stings">Stings</option>
+                <option value="Sesi_Bauru">Sesi Bauru</option>
+                <option value="Modena">Modena</option>
+                <option value="Sunbirds">Sunbirds</option>
+                </select> 
+
+
+                <label for="forMarcas">Escolha sua marca:</label>
+                <input id="forMarcas" name="marca" list="marca" placeholder="digite sua marca">
+                <datalist id="marca"> <!--datalist: seleção de itens com OPÇÃO DE ESCRITA-->
+                <option value="NIKE"></option>
+                <option value="ADIDAS"></option>
+                <option value="PUMA"></option>
+                <option value="ASICS"></option>
+                <option value="MIZUNO"></option>
+                <option value="JORDAN"></option>
+                </datalist>
+    
+            </fieldset>
+            
+            
+            <br/><br/>
+
+
+            <p>Sugestões, elogios e criticas</p>
+            <textarea name="mensagem" rows="10" cols="50" placeholder="Deixa sua mensagem aqui" required></textarea> <!--textarea: define uma caixa de texto-->
+
+            <br/><br/>
+
+            <input type="submit" value="enviar">
+        </form>
+    </body>
+</html>
